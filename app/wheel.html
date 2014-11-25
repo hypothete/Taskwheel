@@ -1,0 +1,4 @@
+<div ng-repeat="task in tasks" class="tasklisttask" style="transform:rotate({{360*$index/(tasks.length)}}deg)">
+	{{task.description}} {{task.timelogged}}
+	<button ng-click="increment(task); $event.stopPropagation();">+</button><button ng-click="delete($index); $event.stopPropagation();">x</button>
+</div>
